@@ -176,7 +176,7 @@
         track: false
       };
       req.open('POST', "" + options.host + "/v1/send", true);
-      req.setRequestHeader('Content-Type', 'text/plain');
+      req.setRequestHeader('Content-Type', 'application/json');
       req.addEventListener('load', function() {
         return updateLatency(now() - sendStart);
       }, false);
